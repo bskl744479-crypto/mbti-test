@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>荣格八维 MBTI 人格测试</title>
+<title>鑽ｆ牸鍏淮 MBTI 浜烘牸娴嬭瘯</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -14,7 +14,7 @@
   }
   .container { max-width: 800px; margin: 0 auto; padding: 20px; }
 
-  /* --- 首页 --- */
+  /* --- 棣栭〉 --- */
   #home {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     min-height: 85vh; text-align: center;
@@ -47,7 +47,7 @@
   .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 32px rgba(124,58,237,0.5); }
   .btn:active { transform: scale(0.97); }
 
-  /* --- 进度条 --- */
+  /* --- 杩涘害鏉?--- */
   .progress-wrap { margin: 16px 0 24px; }
   .progress-bar {
     background: rgba(255,255,255,0.08); border-radius: 12px; height: 8px; overflow: hidden;
@@ -58,7 +58,7 @@
   }
   .progress-label { display: flex; justify-content: space-between; font-size: 0.85em; color: #94a3b8; margin-bottom: 6px; }
 
-  /* --- 题目卡片 --- */
+  /* --- 棰樼洰鍗＄墖 --- */
   .question-card {
     display: none; background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.08); border-radius: 20px;
@@ -101,7 +101,7 @@
   }
   .nav-btns button.primary:hover { box-shadow: 0 4px 20px rgba(124,58,237,0.4); }
 
-  /* --- 结果页 --- */
+  /* --- 缁撴灉椤?--- */
   #result {
     display: none; padding: 20px 0;
   }
@@ -118,13 +118,13 @@
   .result-name { font-size: 1.5em; color: #e2e8f0; margin-top: 4px; font-weight: 600; }
   .result-desc { color: #94a3b8; max-width: 560px; margin: 10px auto 0; line-height: 1.8; font-size: 0.95em; }
 
-  /* --- 功能雷达 --- */
+  /* --- 鍔熻兘闆疯揪 --- */
   .radar-wrap { background: rgba(255,255,255,0.04); border-radius: 20px; padding: 24px; margin-bottom: 28px; }
   .radar-wrap h3 { font-size: 1em; color: #94a3b8; margin-bottom: 16px; text-align: center; }
   .radar-chart { position: relative; width: 100%; max-width: 420px; margin: 0 auto; }
   .radar-chart canvas { width: 100%; height: auto; }
 
-  /* --- 功能详情 --- */
+  /* --- 鍔熻兘璇︽儏 --- */
   .func-details { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 28px; }
   .func-item {
     background: rgba(255,255,255,0.04); border-radius: 14px; padding: 14px 16px;
@@ -148,7 +148,7 @@
   .si .func-name, .si .func-score { color: #fbbf24; } .si .func-score-bar div { background: #fbbf24; }
   .se .func-name, .se .func-score { color: #34d399; } .se .func-score-bar div { background: #34d399; }
 
-  /* --- 功能栈 --- */
+  /* --- 鍔熻兘鏍?--- */
   .stack-wrap { background: rgba(255,255,255,0.04); border-radius: 20px; padding: 24px; margin-bottom: 28px; }
   .stack-wrap h3 { font-size: 1em; color: #94a3b8; margin-bottom: 16px; text-align: center; }
   .stack-cards { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
@@ -183,24 +183,24 @@
 
 <div class="container">
 
-  <!-- ========== 首页 ========== -->
+  <!-- ========== 棣栭〉 ========== -->
   <div id="home">
-    <h1>🧠 荣格八维 · 人格罗盘</h1>
-    <p class="subtitle">基于认知功能的 MBTI 深度测评</p>
+    <h1>馃 鑽ｆ牸鍏淮 路 浜烘牸缃楃洏</h1>
+    <p class="subtitle">鍩轰簬璁ょ煡鍔熻兘鐨?MBTI 娣卞害娴嬭瘎</p>
     <div class="intro-box">
-      <p>不同于传统二分法，本测试基于 <strong>荣格八维认知功能</strong>（Jungian Cognitive Functions）来定位你的 MBTI 类型。</p>
+      <p>涓嶅悓浜庝紶缁熶簩鍒嗘硶锛屾湰娴嬭瘯鍩轰簬 <strong>鑽ｆ牸鍏淮璁ょ煡鍔熻兘</strong>锛圝ungian Cognitive Functions锛夋潵瀹氫綅浣犵殑 MBTI 绫诲瀷銆?/p>
       <div class="func-badges">
-        <span>Fi 内倾情感</span><span>Fe 外倾情感</span>
-        <span>Ti 内倾思考</span><span>Te 外倾思考</span>
-        <span>Ni 内倾直觉</span><span>Ne 外倾直觉</span>
-        <span>Si 内倾感觉</span><span>Se 外倾感觉</span>
+        <span>Fi 鍐呭€炬儏鎰?/span><span>Fe 澶栧€炬儏鎰?/span>
+        <span>Ti 鍐呭€炬€濊€?/span><span>Te 澶栧€炬€濊€?/span>
+        <span>Ni 鍐呭€剧洿瑙?/span><span>Ne 澶栧€剧洿瑙?/span>
+        <span>Si 鍐呭€炬劅瑙?/span><span>Se 澶栧€炬劅瑙?/span>
       </div>
-      <p>共 <strong>56 题</strong>，约 8-12 分钟完成。请根据第一反应选择，无需过度思考。</p>
+      <p>鍏?<strong>56 棰?/strong>锛岀害 8-12 鍒嗛挓瀹屾垚銆傝鏍规嵁绗竴鍙嶅簲閫夋嫨锛屾棤闇€杩囧害鎬濊€冦€?/p>
     </div>
-    <button class="btn" onclick="startTest()">开始测试 →</button>
+    <button class="btn" onclick="startTest()">寮€濮嬫祴璇?鈫?/button>
   </div>
 
-  <!-- ========== 测试 ========== -->
+  <!-- ========== 娴嬭瘯 ========== -->
   <div id="quiz" style="display:none;">
     <div class="progress-wrap">
       <div class="progress-label"><span id="pLabel">1 / 56</span><span id="pPct">0%</span></div>
@@ -209,176 +209,174 @@
     <div id="qContainer"></div>
   </div>
 
-  <!-- ========== 结果 ========== -->
+  <!-- ========== 缁撴灉 ========== -->
   <div id="result">
     <div class="result-header">
       <div class="result-type" id="rType">INFP</div>
-      <div class="result-name" id="rName">调停者</div>
-      <div class="result-desc" id="rDesc">理想主义者，诗意且善良的内心世界……</div>
+      <div class="result-name" id="rName">璋冨仠鑰?/div>
+      <div class="result-desc" id="rDesc">鐞嗘兂涓讳箟鑰咃紝璇楁剰涓斿杽鑹殑鍐呭績涓栫晫鈥︹€?/div>
     </div>
 
     <div class="radar-wrap">
-      <h3>📊 八维认知功能雷达图</h3>
+      <h3>馃搳 鍏淮璁ょ煡鍔熻兘闆疯揪鍥?/h3>
       <div class="radar-chart"><canvas id="radarCanvas" width="400" height="400"></canvas></div>
     </div>
 
     <div class="func-details" id="funcDetails"></div>
 
     <div class="stack-wrap">
-      <h3>🧩 你的功能栈</h3>
+      <h3>馃З 浣犵殑鍔熻兘鏍?/h3>
       <div class="stack-cards" id="stackCards"></div>
     </div>
 
-    <button class="btn-restart" onclick="restart()">🔄 重新测试</button>
+    <button class="btn-restart" onclick="restart()">馃攧 閲嶆柊娴嬭瘯</button>
   </div>
 
 </div>
 
 <script>
 // =====================================================
-// 1. 八维认知功能定义
+// 1. 鍏淮璁ょ煡鍔熻兘瀹氫箟
 // =====================================================
 const FUNCTIONS = {
-  Fi: { label: '内倾情感', en: 'Introverted Feeling', color: '#f472b6' },
-  Fe: { label: '外倾情感', en: 'Extraverted Feeling', color: '#fb923c' },
-  Ti: { label: '内倾思考', en: 'Introverted Thinking', color: '#4ade80' },
-  Te: { label: '外倾思考', en: 'Extraverted Thinking', color: '#22d3ee' },
-  Ni: { label: '内倾直觉', en: 'Introverted Intuition', color: '#a78bfa' },
-  Ne: { label: '外倾直觉', en: 'Extraverted Intuition', color: '#60a5fa' },
-  Si: { label: '内倾感觉', en: 'Introverted Sensation', color: '#fbbf24' },
-  Se: { label: '外倾感觉', en: 'Extraverted Sensation', color: '#34d399' },
+  Fi: { label: '鍐呭€炬儏鎰?, en: 'Introverted Feeling', color: '#f472b6' },
+  Fe: { label: '澶栧€炬儏鎰?, en: 'Extraverted Feeling', color: '#fb923c' },
+  Ti: { label: '鍐呭€炬€濊€?, en: 'Introverted Thinking', color: '#4ade80' },
+  Te: { label: '澶栧€炬€濊€?, en: 'Extraverted Thinking', color: '#22d3ee' },
+  Ni: { label: '鍐呭€剧洿瑙?, en: 'Introverted Intuition', color: '#a78bfa' },
+  Ne: { label: '澶栧€剧洿瑙?, en: 'Extraverted Intuition', color: '#60a5fa' },
+  Si: { label: '鍐呭€炬劅瑙?, en: 'Introverted Sensation', color: '#fbbf24' },
+  Se: { label: '澶栧€炬劅瑙?, en: 'Extraverted Sensation', color: '#34d399' },
 };
 
 // =====================================================
-// 2. 16 种 MBTI 类型信息
+// 2. 16 绉?MBTI 绫诲瀷淇℃伅
 // =====================================================
 const TYPES = {
-  INFP: { name_cn: '调停者', stack: ['Fi','Ne','Si','Te'],
-    desc: '理想主义者，诗意且善良。忠于内在价值，富有创造力和同理心，追求真实与意义。' },
-  ISFP: { name_cn: '探险家', stack: ['Fi','Se','Ni','Te'],
-    desc: '安静、敏感、友善。用行动和审美表达自己，活在当下，珍视个人空间与自由。' },
-  ENFP: { name_cn: '活动家', stack: ['Ne','Fi','Te','Si'],
-    desc: '热情洋溢、富有想象力。善于发现可能性，感染力极强，渴望与他人建立深层联结。' },
-  ENTP: { name_cn: '辩论家', stack: ['Ne','Ti','Fe','Si'],
-    desc: '聪明好奇，喜欢挑战常规。思维敏捷，乐于辩论，享受探索新概念和可能性。' },
-  INFJ: { name_cn: '提倡者', stack: ['Ni','Fe','Ti','Se'],
-    desc: '沉静而有力量。具深刻洞察力与远见，理想主义但不失务实，渴望让世界变得更好。' },
-  INTJ: { name_cn: '建筑师', stack: ['Ni','Te','Fi','Se'],
-    desc: '独立果断，富有战略远见。善于构建系统与长期规划，追求知识与卓越。' },
-  ENFJ: { name_cn: '主人公', stack: ['Fe','Ni','Se','Ti'],
-    desc: '魅力四射的领导者。天生善于感染和鼓舞他人，极具同理心与组织力。' },
-  ESFJ: { name_cn: '执政官', stack: ['Fe','Si','Ne','Ti'],
-    desc: '热心周到，责任感强。注重传统与和谐，乐于服务他人，是社群的中坚力量。' },
-  INTP: { name_cn: '逻辑学家', stack: ['Ti','Ne','Si','Fe'],
-    desc: '理性好奇的分析者。热爱理论与抽象思考，追求逻辑一致性，对知识充满渴望。' },
-  ISTP: { name_cn: '鉴赏家', stack: ['Ti','Se','Ni','Fe'],
-    desc: '冷静务实，动手能力强。善于在危机中保持镇定，喜欢探索事物运作的原理。' },
-  ENTJ: { name_cn: '指挥官', stack: ['Te','Ni','Se','Fi'],
-    desc: '天生的领袖，果断高效。具有远见卓识，善于制定战略并推动执行。' },
-  ESTJ: { name_cn: '总经理', stack: ['Te','Si','Ne','Fi'],
-    desc: '务实可靠，执行力强。注重秩序与效率，是组织和社区的中流砥柱。' },
-  ISTJ: { name_cn: '物流师', stack: ['Si','Te','Fi','Ne'],
-    desc: '正直可靠，尽职尽责。注重细节与规则，是坚守承诺的实干家。' },
-  ISFJ: { name_cn: '守卫者', stack: ['Si','Fe','Ti','Ne'],
-    desc: '温柔体贴，默默付出。极具责任感和奉献精神，是值得信赖的守护者。' },
-  ESFP: { name_cn: '表演者', stack: ['Se','Fi','Te','Ni'],
-    desc: '活力四射，热爱生活。善于社交和即兴发挥，是人群中的快乐源泉。' },
-  ESTP: { name_cn: '企业家', stack: ['Se','Ti','Fe','Ni'],
-    desc: '大胆务实，行动力强。善于把握机会，在动态环境中游刃有余。' },
+  INFP: { name_cn: '璋冨仠鑰?, stack: ['Fi','Ne','Si','Te'],
+    desc: '鐞嗘兂涓讳箟鑰咃紝璇楁剰涓斿杽鑹€傚繝浜庡唴鍦ㄤ环鍊硷紝瀵屾湁鍒涢€犲姏鍜屽悓鐞嗗績锛岃拷姹傜湡瀹炰笌鎰忎箟銆? },
+  ISFP: { name_cn: '鎺㈤櫓瀹?, stack: ['Fi','Se','Ni','Te'],
+    desc: '瀹夐潤銆佹晱鎰熴€佸弸鍠勩€傜敤琛屽姩鍜屽缇庤〃杈捐嚜宸憋紝娲诲湪褰撲笅锛岀弽瑙嗕釜浜虹┖闂翠笌鑷敱銆? },
+  ENFP: { name_cn: '娲诲姩瀹?, stack: ['Ne','Fi','Te','Si'],
+    desc: '鐑儏娲嬫孩銆佸瘜鏈夋兂璞″姏銆傚杽浜庡彂鐜板彲鑳芥€э紝鎰熸煋鍔涙瀬寮猴紝娓存湜涓庝粬浜哄缓绔嬫繁灞傝仈缁撱€? },
+  ENTP: { name_cn: '杈╄瀹?, stack: ['Ne','Ti','Fe','Si'],
+    desc: '鑱槑濂藉锛屽枩娆㈡寫鎴樺父瑙勩€傛€濈淮鏁忔嵎锛屼箰浜庤京璁猴紝浜彈鎺㈢储鏂版蹇靛拰鍙兘鎬с€? },
+  INFJ: { name_cn: '鎻愬€¤€?, stack: ['Ni','Fe','Ti','Se'],
+    desc: '娌夐潤鑰屾湁鍔涢噺銆傚叿娣卞埢娲炲療鍔涗笌杩滆锛岀悊鎯充富涔変絾涓嶅け鍔″疄锛屾复鏈涜涓栫晫鍙樺緱鏇村ソ銆? },
+  INTJ: { name_cn: '寤虹瓚甯?, stack: ['Ni','Te','Fi','Se'],
+    desc: '鐙珛鏋滄柇锛屽瘜鏈夋垬鐣ヨ繙瑙併€傚杽浜庢瀯寤虹郴缁熶笌闀挎湡瑙勫垝锛岃拷姹傜煡璇嗕笌鍗撹秺銆? },
+  ENFJ: { name_cn: '涓讳汉鍏?, stack: ['Fe','Ni','Se','Ti'],
+    desc: '榄呭姏鍥涘皠鐨勯瀵艰€呫€傚ぉ鐢熷杽浜庢劅鏌撳拰榧撹垶浠栦汉锛屾瀬鍏峰悓鐞嗗績涓庣粍缁囧姏銆? },
+  ESFJ: { name_cn: '鎵ф斂瀹?, stack: ['Fe','Si','Ne','Ti'],
+    desc: '鐑績鍛ㄥ埌锛岃矗浠绘劅寮恒€傛敞閲嶄紶缁熶笌鍜岃皭锛屼箰浜庢湇鍔′粬浜猴紝鏄ぞ缇ょ殑涓潥鍔涢噺銆? },
+  INTP: { name_cn: '閫昏緫瀛﹀', stack: ['Ti','Ne','Si','Fe'],
+    desc: '鐞嗘€уソ濂囩殑鍒嗘瀽鑰呫€傜儹鐖辩悊璁轰笌鎶借薄鎬濊€冿紝杩芥眰閫昏緫涓€鑷存€э紝瀵圭煡璇嗗厖婊℃复鏈涖€? },
+  ISTP: { name_cn: '閴磋祻瀹?, stack: ['Ti','Se','Ni','Fe'],
+    desc: '鍐烽潤鍔″疄锛屽姩鎵嬭兘鍔涘己銆傚杽浜庡湪鍗辨満涓繚鎸侀晣瀹氾紝鍠滄鎺㈢储浜嬬墿杩愪綔鐨勫師鐞嗐€? },
+  ENTJ: { name_cn: '鎸囨尌瀹?, stack: ['Te','Ni','Se','Fi'],
+    desc: '澶╃敓鐨勯琚栵紝鏋滄柇楂樻晥銆傚叿鏈夎繙瑙佸崜璇嗭紝鍠勪簬鍒跺畾鎴樼暐骞舵帹鍔ㄦ墽琛屻€? },
+  ESTJ: { name_cn: '鎬荤粡鐞?, stack: ['Te','Si','Ne','Fi'],
+    desc: '鍔″疄鍙潬锛屾墽琛屽姏寮恒€傛敞閲嶇З搴忎笌鏁堢巼锛屾槸缁勭粐鍜岀ぞ鍖虹殑涓祦鐮ユ煴銆? },
+  ISTJ: { name_cn: '鐗╂祦甯?, stack: ['Si','Te','Fi','Ne'],
+    desc: '姝ｇ洿鍙潬锛屽敖鑱屽敖璐ｃ€傛敞閲嶇粏鑺備笌瑙勫垯锛屾槸鍧氬畧鎵胯鐨勫疄骞插銆? },
+  ISFJ: { name_cn: '瀹堝崼鑰?, stack: ['Si','Fe','Ti','Ne'],
+    desc: '娓╂煍浣撹创锛岄粯榛樹粯鍑恒€傛瀬鍏疯矗浠绘劅鍜屽鐚簿绁烇紝鏄€煎緱淇¤禆鐨勫畧鎶よ€呫€? },
+  ESFP: { name_cn: '琛ㄦ紨鑰?, stack: ['Se','Fi','Te','Ni'],
+    desc: '娲诲姏鍥涘皠锛岀儹鐖辩敓娲汇€傚杽浜庣ぞ浜ゅ拰鍗冲叴鍙戞尌锛屾槸浜虹兢涓殑蹇箰婧愭硥銆? },
+  ESTP: { name_cn: '浼佷笟瀹?, stack: ['Se','Ti','Fe','Ni'],
+    desc: '澶ц儐鍔″疄锛岃鍔ㄥ姏寮恒€傚杽浜庢妸鎻℃満浼氾紝鍦ㄥ姩鎬佺幆澧冧腑娓稿垉鏈変綑銆? },
 };
 
 // =====================================================
-// 3. 56 道题目 (每题对应一种认知功能)
+// 3. 56 閬撻鐩?(姣忛瀵瑰簲涓€绉嶈鐭ュ姛鑳?
 // =====================================================
 const QUESTIONS = [
   // ----- Fi (内倾情感) -----
-  { func: 'Fi', text: '我高度重视自己的价值观，不愿为了迎合他人而违背内心。' },
-  { func: 'Fi', text: '我经常花时间反思自己的感受和情绪变化。' },
-  { func: 'Fi', text: '对我来说，「做自己」比「融入群体」更重要。' },
-  { func: 'Fi', text: '当看到不公义的事情时，我内心会感到强烈的愤怒或悲伤。' },
-  { func: 'Fi', text: '我会用「这件事对我来说意味着什么」来衡量它的重要性。' },
-  { func: 'Fi', text: '我倾向于根据自己的内心感受而非外界标准来做决定。' },
-  { func: 'Fi', text: '我珍惜那些能让我表达真实自我的关系和环境。' },
+  { func: 'Fi', text: '朋友都认为某部电影很好，但你内心觉得它很一般。你不会为了合群而说喜欢，而是诚实地表达自己的真实感受。' },
+  { func: 'Fi', text: '下班回家后，你会独处一会儿，回放今天发生的事，问自己"我真正感觉怎么样"。这种自我对话是你日常的一部分。' },
+  { func: 'Fi', text: '公司组织团建去唱K，大家玩得很嗨，但你其实更想安静看书。你选择婉拒，因为在心里"做自己"比"合群"更重要。' },
+  { func: 'Fi', text: '看到新闻里有人被欺负或受到不公正对待时，你会感到非常愤怒，甚至会想"如果我在场一定要做点什么"。' },
+  { func: 'Fi', text: '面对跳槽机会，你不只看薪资——你更在意这份工作对自己人生的意义，是否符合你的信念和追求。' },
+  { func: 'Fi', text: '别人都觉得学金融"有前途"，但你内心清楚自己热爱画画。你会选择听从自己的心声，而不是外界的标准。' },
+  { func: 'Fi', text: '你有这样一个朋友——在他面前你不需要伪装，可以毫无顾忌地说出最真实的想法。这种"安全"的关系让你非常珍惜。' },
 
   // ----- Fe (外倾情感) -----
-  { func: 'Fe', text: '我很在意周围人的情绪状态，并会主动调节氛围。' },
-  { func: 'Fe', text: '当团队气氛紧张时，我会本能地想要缓和局面。' },
-  { func: 'Fe', text: '我擅长体察别人的需求，并乐于提供帮助。' },
-  { func: 'Fe', text: '我会因为别人的开心而开心，因别人的难过而低落。' },
-  { func: 'Fe', text: '做决定时，我会优先考虑对他人的影响。' },
-  { func: 'Fe', text: '社交场合中，我自然地会去关照那些被冷落的人。' },
-  { func: 'Fe', text: '我重视和谐的人际关系，冲突会让我感到不安。' },
+  { func: 'Fe', text: '聚餐时你能敏锐地察觉谁不太开心、谁有点被冷落，会主动说些话或安排个话题，让气氛重新融洽起来。' },
+  { func: 'Fe', text: '开会时两个同事吵起来了，你第一反应不是分析谁对谁错，而是想打个圆场说"大家先冷静一下"，缓和紧张的气氛。' },
+  { func: 'Fe', text: '看到同事忙得没空吃午饭，你会默默帮他带一份回来。你能从对方的语气和表情中察觉到别人没说出口的需求。' },
+  { func: 'Fe', text: '朋友收到了好消息，你比他还兴奋；他遇到难过的事，你会跟着低落一整天。你的情绪很容易被周围人的状态感染。' },
+  { func: 'Fe', text: '你想辞职去旅行，但想到这会打乱团队的计划、给同事增加负担，你就会犹豫。你很难做只考虑自己的决定。' },
+  { func: 'Fe', text: '派对上大家都在热聊，你注意到有个新来的朋友局促地站在角落，会主动走过去和他搭话，让他感到被欢迎。' },
+  { func: 'Fe', text: '和伴侣或家人吵架后，你会浑身不舒服，甚至无法专心做任何事。你会想尽快和解，因为冷战的氛围让你压力很大。' },
 
   // ----- Ti (内倾思考) -----
-  { func: 'Ti', text: '我喜欢深入分析事物的内在逻辑和原理。' },
-  { func: 'Ti', text: '当别人的论证有逻辑漏洞时，我很难忽略它。' },
-  { func: 'Ti', text: '我在做判断时追求精确和一致性，而非人云亦云。' },
-  { func: 'Ti', text: '我经常在脑海中构建系统化的知识框架。' },
-  { func: 'Ti', text: '我会拆解复杂问题，逐一分析每个环节的因果关系。' },
-  { func: 'Ti', text: '我对「为什么」比「是什么」更感兴趣。' },
-  { func: 'Ti', text: '我很享受独自思考问题，把思路梳理清楚的过程。' },
+  { func: 'Ti', text: '家里的电器坏了，你不会直接叫维修，而是先上网查原理图，想搞懂"它到底是怎么工作的"，弄清楚原因才甘心。' },
+  { func: 'Ti', text: '听人讲话时，如果对方的推理有逻辑矛盾，你会忍不住想指出"这里说不通"。别人可能放过，但你很难忽略逻辑漏洞。' },
+  { func: 'Ti', text: '大家都说某个理财APP好用，你不会直接跟风，而是会认真研究它的费率、安全性，用自己的标准判断后才会决定。' },
+  { func: 'Ti', text: '学习新领域时，你喜欢先画一张思维导图，把概念之间的逻辑关系梳理清楚，搭出一个系统框架，然后往里填充细节。' },
+  { func: 'Ti', text: '遇到一个难题时，你会把它拆成几个小问题，像侦探一样逐个环节追踪因果——"因为A所以B，因为B所以C"，一步步推导下去。' },
+  { func: 'Ti', text: '看新闻时，比起"发生了什么"，你更关心"为什么会发生"。你总是追问背后的深层原因，直到找到逻辑自洽的解释。' },
+  { func: 'Ti', text: '周末午后，你一个人坐在咖啡馆，拿出一张纸开始梳理最近在想的问题。把混乱的思绪一条条理清，这种感觉让你非常满足。' },
 
   // ----- Te (外倾思考) -----
-  { func: 'Te', text: '我喜欢制定清晰的计划和目标，然后高效执行。' },
-  { func: 'Te', text: '我认为效率和成果是衡量工作的重要标准。' },
-  { func: 'Te', text: '做决定时，我会优先参考客观数据和事实依据。' },
-  { func: 'Te', text: '我习惯把任务组织成清单或框架来管理。' },
-  { func: 'Te', text: '我愿意站出来主导局面，推动事情向前发展。' },
-  { func: 'Te', text: '我倾向于直接指出问题，而不是绕弯子。' },
-  { func: 'Te', text: '当目标不明确时，我会主动去界定目标和衡量标准。' },
+  { func: 'Te', text: '开始一项新任务前，你会先列出详细的计划表：今天做什么、明天做什么、截止时间是什么，然后按部就班高效推进。' },
+  { func: 'Te', text: '团队讨论方案时，如果有人在讲大道理却不出具体成果，你会觉得不耐烦。对你来说，"有没有用"和"能不能出结果"才是关键。' },
+  { func: 'Te', text: '买房前你会把房价走势、贷款利率、周边配套全查一遍，做成数据对比表。你不靠感觉，而是靠事实和数据来做判断。' },
+  { func: 'Te', text: '你的手机里装满了各种待办清单和项目管理工具。每天第一件事就是打开清单，按优先级勾掉已完成的任务——这让你感到掌控感。' },
+  { func: 'Te', text: '小组作业陷入僵局时，你会主动站出来说"我们这样分工吧"，然后给每个人分配任务。你天生是那个让事情运转起来的人。' },
+  { func: 'Te', text: '同事的方案有明显漏洞时，你不会委婉暗示，而是直接说"这里有问题需要改"。你认为直接高效比照顾面子更重要。' },
+  { func: 'Te', text: '老板交代一个模糊的任务，你不会坐在那里等指示，而是主动去问"我们要达到什么效果？用什么标准衡量成功？"把目标清晰化。' },
 
   // ----- Ni (内倾直觉) -----
-  { func: 'Ni', text: '我经常能预感到某件事未来的走向，而且往往准确。' },
-  { func: 'Ni', text: '我喜欢透过表面现象，挖掘深层的本质和模式。' },
-  { func: 'Ni', text: '我脑海中常有象征性的意象或隐喻浮现。' },
-  { func: 'Ni', text: '我会在某个瞬间突然看透一个复杂问题的关键。' },
-  { func: 'Ni', text: '我关注长期愿景多于眼前的细节。' },
-  { func: 'Ni', text: '我信任自己的直觉，即使暂时无法用逻辑解释。' },
-  { func: 'Ni', text: '在做重大决定时，我会先想象不同选择带来的长期图景。' },
+  { func: 'Ni', text: '你经常有一种说不清的感觉——这段时间跳槽会是个好时机，或是这个项目可能会出问题。后来事实证明，你的预感往往是对的。' },
+  { func: 'Ni', text: '看悬疑剧时，别人还在看表面剧情，你已经在想"这个细节是不是在暗示什么"。你喜欢看穿表象下的真实模式和深层含义。' },
+  { func: 'Ni', text: '和朋友聊天时，你突然说"这件事就像一棵树，表面看是树枝的问题，其实是根烂了"。你经常用比喻和意象来表达自己的洞察。' },
+  { func: 'Ni', text: '想了好几天的问题没有头绪，但在洗澡或散步时，突然灵光一闪——"原来关键在这里！"这种顿悟时刻对你来说并不陌生。' },
+  { func: 'Ni', text: '做职业规划时，你更关注"五年后我要成为什么样的人"，而不是"下个月能涨多少工资"。你常被同事说"想得太远"。' },
+  { func: 'Ni', text: '虽然当前的数据看起来一切都好，但你内心有个声音说"这个投资有问题"。你选择相信直觉，即使暂时说不出具体理由。' },
+  { func: 'Ni', text: '换城市工作前，你不会只看待遇，而是闭上眼睛想象——在A城市生活一年后的自己是什么样子？在B城市呢？哪个画面更让你安心就选哪个。' },
 
   // ----- Ne (外倾直觉) -----
-  { func: 'Ne', text: '我头脑中经常冒出各种各样的新点子和可能性。' },
-  { func: 'Ne', text: '我喜欢头脑风暴，把看似不相关的概念联系起来。' },
-  { func: 'Ne', text: '我对新事物充满好奇，喜欢探索未知的领域。' },
-  { func: 'Ne', text: '一个话题可以引出我无数个联想和发散的想法。' },
-  { func: 'Ne', text: '我乐于尝试不同的角度来理解同一件事。' },
-  { func: 'Ne', text: '我容易被充满可能性的未来所吸引，而非重复过去。' },
-  { func: 'Ne', text: '和朋友聊天时，我经常从一个话题跳跃到另一个话题。' },
+  { func: 'Ne', text: '开会讨论一个问题时，你能一口气提出七八个不同的解决方案，虽然有些听起来天马行空，但你的脑海里就是不停地冒出新点子。' },
+  { func: 'Ne', text: '别人觉得"咖啡"和"编程"完全不相关，但你能从咖啡的冲泡手法联想到算法的优化过程。你喜欢把不同领域的东西串联起来。' },
+  { func: 'Ne', text: '看到一个没听过的词或概念，你会立刻打开手机搜索。你享受那种"又发现了一个新世界"的兴奋感，好奇心是你最大的驱动力。' },
+  { func: 'Ne', text: '朋友说"想去日本旅行"，你已经能从这句话联想到日本的动漫、寿司文化、新干线技术、枯山水庭院……一个开头能引出你一大堆想法。' },
+  { func: 'Ne', text: '和人有分歧时，你会主动站在对方的角度去想"如果我是他，我为什么会这么想"。你习惯从多个视角看待同一件事。' },
+  { func: 'Ne', text: '老同学聚会时大家聊的都是当年的事，你听着听着就走神了。相比之下，"未来可能发生什么"比"过去发生了什么"更让你兴奋。' },
+  { func: 'Ne', text: '和好友聊天时，话题从"周末去哪吃"到"意大利面起源"，再到"达芬奇是个天才"，跳跃得像兔子一样快——你习惯了这种发散式聊天。' },
 
   // ----- Si (内倾感觉) -----
-  { func: 'Si', text: '我对过去的经历有清晰的记忆，细节历历在目。' },
-  { func: 'Si', text: '我珍视传统和习惯，稳定的节奏让我感到安心。' },
-  { func: 'Si', text: '我会把以往的经验作为当下决策的重要参考。' },
-  { func: 'Si', text: '我喜欢把东西整理得井井有条，按惯例行事。' },
-  { func: 'Si', text: '和旧友回忆过去的美好时光让我感到温暖。' },
-  { func: 'Si', text: '对于熟悉的事物，我会感到一种深厚的归属感。' },
-  { func: 'Si', text: '我习惯在做事前先参照已有的流程和方法。' },
+  { func: 'Si', text: '你能清楚地记得五年前那次毕业旅行的每个细节——那天穿的什么衣服、吃了什么小吃、路边放了什么音乐。过去的画面在你脑海中像照片一样清晰。' },
+  { func: 'Si', text: '每周五晚上固定去吃同一家面馆、每年春节都回老家做同样的事。这种重复的仪式感让你很安心——熟悉的节奏就是安全感。' },
+  { func: 'Si', text: '换工作时，你会翻出三年前那份工作的笔记，回想当初踩过哪些坑，告诉自己"这次不能再犯同样的错误"。过去的经验是你最好的指南。' },
+  { func: 'Si', text: '你的书桌总是整整齐齐，物品有固定的位置；每天起床的流程也一成不变——咖啡、晨间新闻、出门。这种秩序感让你感到生活可控。' },
+  { func: 'Si', text: '和老朋友见面时，你们最爱做的事就是翻出老照片、说起当年的糗事。回忆起那些共同经历的时刻，会让你心里暖暖的。' },
+  { func: 'Si', text: '回到小时候长大的老街，虽然很多店换了，但闻到街角那家早餐店的豆浆味，你会瞬间感到踏实——熟悉的事物是"回家"的感觉。' },
+  { func: 'Si', text: '学新软件时，你不会直接上手乱点，而是先找教程、看说明书，按已验证的步骤来。你觉得已经证明有效的方法最可靠。' },
 
   // ----- Se (外倾感觉) -----
-  { func: 'Se', text: '我善于观察周围的物理环境，能注意到细微的变化。' },
-  { func: 'Se', text: '我喜欢亲身体验，从实践和感官刺激中获取信息。' },
-  { func: 'Se', text: '我对当下的瞬间非常专注，很少走神。' },
-  { func: 'Se', text: '我享受美食、音乐、运动等感官体验带来的愉悦。' },
-  { func: 'Se', text: '面对突发状况，我能快速反应并采取行动。' },
-  { func: 'Se', text: '我喜欢动手操作，而不是纸上谈兵。' },
-  { func: 'Se', text: '我注重生活品质，喜欢营造舒适的环境。' },
+  { func: 'Se', text: '走进一个房间，你能立刻注意到窗帘换了一副、茶几上多了一个摆件。别人走过一百遍也没发现的变化，你一眼就看到了。' },
+  { func: 'Se', text: '学做菜时，你不会看食谱，而是直接动手——切一切、闻一闻、尝一尝。对你来说，"亲手做一遍"比"看十遍教程"学得快得多。' },
+  { func: 'Se', text: '吃饭时专心吃饭，走路时专心走路。你不是那种"边吃饭边想工作"的人——你活在当下每一刻，很少分心到过去或未来。' },
+  { func: 'Se', text: '你是个"感官型"的人——吃到一口惊艳的料理会开心半天，听到一首好歌会起鸡皮疙瘩，运动后大汗淋漓的感觉让你觉得特别痛快。' },
+  { func: 'Se', text: '朋友被烫到时，其他人还在尖叫，你已经冲过去打开水龙头帮他们冲凉水了。在紧急情况下，你的身体总是比大脑先做出反应。' },
+  { func: 'Se', text: '组装家具时，你直接拆开箱子拿起螺丝刀就开始干，说明书放在一旁很少看。"边做边学"才是你的风格，坐着讨论不如动手试试。' },
+  { func: 'Se', text: '你会花很多心思布置自己的小空间——挑一盆绿植、换一张质感好的桌布、点个香薰蜡烛。这些细节让生活变得更有"感觉"。' },
 ];
 
 // =====================================================
-// 3b. 题型映射
+// 3b. 棰樺瀷鏄犲皠
 // =====================================================
 const FUNC_ORDER = ['Fi','Fe','Ti','Te','Ni','Ne','Si','Se'];
 
 // =====================================================
-// 4. 测试状态
-// =====================================================
+// 4. 娴嬭瘯鐘舵€?// =====================================================
 let currentQ = 0;
 let answers = new Array(QUESTIONS.length).fill(null);
 let testStarted = false;
 
 // =====================================================
-// 5. UI: 开始测试
-// =====================================================
+// 5. UI: 寮€濮嬫祴璇?// =====================================================
 function startTest() {
   document.getElementById('home').style.display = 'none';
   document.getElementById('quiz').style.display = 'block';
@@ -392,7 +390,7 @@ function startTest() {
 }
 
 // =====================================================
-// 6. UI: 渲染题目
+// 6. UI: 娓叉煋棰樼洰
 // =====================================================
 function renderQuestion() {
   const container = document.getElementById('qContainer');
@@ -403,7 +401,7 @@ function renderQuestion() {
 
   container.innerHTML = `
     <div class="question-card active">
-      <div class="q-number">第 ${idx+1} / ${total} 题</div>
+      <div class="q-number">绗?${idx+1} / ${total} 棰?/div>
       <div class="q-func-label">${func.label} (${q.func})</div>
       <div class="q-text">${q.text}</div>
       <div class="scale" id="scaleGroup">
@@ -412,14 +410,14 @@ function renderQuestion() {
         `).join('')}
       </div>
       <div class="scale-labels">
-        <span>完全<br>不同意</span><span></span><span></span>
-        <span>中立</span><span></span><span></span>
-        <span>完全<br>同意</span>
+        <span>瀹屽叏<br>涓嶅悓鎰?/span><span></span><span></span>
+        <span>涓珛</span><span></span><span></span>
+        <span>瀹屽叏<br>鍚屾剰</span>
       </div>
       <div class="nav-btns">
-        <button ${idx === 0 ? 'disabled' : ''} onclick="goQ(${idx-1})">← 上一题</button>
+        <button ${idx === 0 ? 'disabled' : ''} onclick="goQ(${idx-1})">鈫?涓婁竴棰?/button>
         <span></span>
-        <button class="primary" onclick="nextQ()">${idx === total-1 ? '✅ 查看结果' : '下一题 →'}</button>
+        <button class="primary" onclick="nextQ()">${idx === total-1 ? '鉁?鏌ョ湅缁撴灉' : '涓嬩竴棰?鈫?}</button>
       </div>
     </div>
   `;
@@ -464,7 +462,7 @@ function updateProgress() {
 }
 
 // =====================================================
-// 7. 核心算法：计算八维分数 → 判定 MBTI
+// 7. 鏍稿績绠楁硶锛氳绠楀叓缁村垎鏁?鈫?鍒ゅ畾 MBTI
 // =====================================================
 function computeScores() {
   const scores = {};
@@ -478,7 +476,7 @@ function computeScores() {
     counts[q.func]++;
   });
 
-  // 归一化为 1-10 分制
+  // 褰掍竴鍖栦负 1-10 鍒嗗埗
   const result = {};
   FUNC_ORDER.forEach(f => {
     const avg = counts[f] > 0 ? scores[f] / counts[f] : 4;
@@ -491,7 +489,7 @@ function determineType(funcScores) {
   let bestType = null;
   let bestScore = -Infinity;
 
-  const weights = [4, 3, 2, 1]; // 主导 *4, 辅助 *3, 第三 *2, 劣势 *1
+  const weights = [4, 3, 2, 1]; // 涓诲 *4, 杈呭姪 *3, 绗笁 *2, 鍔ｅ娍 *1
 
   for (const [type, info] of Object.entries(TYPES)) {
     let score = 0;
@@ -508,7 +506,7 @@ function determineType(funcScores) {
 }
 
 // =====================================================
-// 8. 展示结果
+// 8. 灞曠ず缁撴灉
 // =====================================================
 function showResult() {
   document.getElementById('quiz').style.display = 'none';
@@ -520,19 +518,17 @@ function showResult() {
   const type = determineType(scores);
   const info = TYPES[type];
 
-  // 类型信息
+  // 绫诲瀷淇℃伅
   document.getElementById('rType').textContent = type;
   document.getElementById('rName').textContent = info.name_cn;
   document.getElementById('rDesc').textContent = info.desc;
 
-  // 功能详情
+  // 鍔熻兘璇︽儏
   renderFuncDetails(scores);
 
-  // 功能栈
-  renderStack(info);
+  // 鍔熻兘鏍?  renderStack(info);
 
-  // 雷达图
-  drawRadar(scores);
+  // 闆疯揪鍥?  drawRadar(scores);
 }
 
 function renderFuncDetails(scores) {
@@ -553,7 +549,7 @@ function renderFuncDetails(scores) {
 
 function renderStack(info) {
   const container = document.getElementById('stackCards');
-  const labels = ['主导功能', '辅助功能', '第三功能', '劣势功能'];
+  const labels = ['涓诲鍔熻兘', '杈呭姪鍔熻兘', '绗笁鍔熻兘', '鍔ｅ娍鍔熻兘'];
   container.innerHTML = info.stack.map((f, i) => `
     <div class="stack-card">
       <div class="stack-order">${labels[i]}</div>
@@ -564,8 +560,7 @@ function renderStack(info) {
 }
 
 // =====================================================
-// 9. 雷达图
-// =====================================================
+// 9. 闆疯揪鍥?// =====================================================
 function drawRadar(scores) {
   const canvas = document.getElementById('radarCanvas');
   const ctx = canvas.getContext('2d');
@@ -577,7 +572,7 @@ function drawRadar(scores) {
   const funcs = FUNC_ORDER;
   const n = funcs.length;
 
-  // 画网格 (5层)
+  // 鐢荤綉鏍?(5灞?
   for (let ring = 1; ring <= 5; ring++) {
     const r = (R / 5) * ring;
     ctx.beginPath();
@@ -592,8 +587,7 @@ function drawRadar(scores) {
     ctx.stroke();
   }
 
-  // 画轴线
-  for (let i = 0; i < n; i++) {
+  // 鐢昏酱绾?  for (let i = 0; i < n; i++) {
     const angle = (Math.PI * 2 * i) / n - Math.PI / 2;
     ctx.beginPath();
     ctx.moveTo(cx, cy);
@@ -602,7 +596,7 @@ function drawRadar(scores) {
     ctx.stroke();
   }
 
-  // 填充数据
+  // 濉厖鏁版嵁
   ctx.beginPath();
   for (let i = 0; i <= n; i++) {
     const idx = i % n;
@@ -620,8 +614,7 @@ function drawRadar(scores) {
   ctx.lineWidth = 2.5;
   ctx.stroke();
 
-  // 数据点
-  for (let i = 0; i < n; i++) {
+  // 鏁版嵁鐐?  for (let i = 0; i < n; i++) {
     const val = (scores[funcs[i]] - 1) / 9;
     const r = val * R;
     const angle = (Math.PI * 2 * i) / n - Math.PI / 2;
@@ -633,7 +626,7 @@ function drawRadar(scores) {
     ctx.fill();
   }
 
-  // 标签
+  // 鏍囩
   ctx.font = '12px -apple-system, "Noto Sans SC", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
@@ -651,8 +644,7 @@ function drawRadar(scores) {
 }
 
 // =====================================================
-// 10. 重新开始
-// =====================================================
+// 10. 閲嶆柊寮€濮?// =====================================================
 function restart() {
   document.getElementById('result').style.display = 'none';
   document.getElementById('result').classList.remove('show');
@@ -678,3 +670,4 @@ document.head.appendChild(styleSheet);
 </script>
 </body>
 </html>
+
